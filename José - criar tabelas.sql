@@ -1,7 +1,10 @@
+-- Remova os traços no inicio da linnha abaixo para criar o banco de dados
 -- CREATE DATABASE LOCADORA_AUTOMOVEIS;
 
 USE LOCADORA_AUTOMOVEIS;
 
+
+-- Criação das tabelas do banco de dados
 CREATE TABLE CLIENTE (
 	CPF 		CHAR(11) 		NOT NULL,
     NOME 		VARCHAR(100) 	NOT NULL,

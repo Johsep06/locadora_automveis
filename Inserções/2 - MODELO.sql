@@ -1,3 +1,5 @@
+USE LOCADORA_AUTOMOVEIS;
+
 insert into MODELO (TIPO, MODELO, MARCA) values ('Picape', 'Mustang', 'Ford');
 insert into MODELO (TIPO, MODELO, MARCA) values ('SUV', 'Sierra 1500', 'GMC');
 insert into MODELO (TIPO, MODELO, MARCA) values ('Sedan', '650', 'BMW');

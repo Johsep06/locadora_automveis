@@ -1,3 +1,5 @@
+USE LOCADORA_AUTOMOVEIS;
+
 insert into MANUTENCAO (MODELO_ID, DATA_MANUTENCAO, VALOR, DESCRICAO) values (82, '7113-09-10', 6446.49, 'orci mauris lacinia sapien quis libero nullam sit amet turpis elementum');
 insert into MANUTENCAO (MODELO_ID, DATA_MANUTENCAO, VALOR, DESCRICAO) values (21, '5240-06-25', 3381.75, 'eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque');
 insert into MANUTENCAO (MODELO_ID, DATA_MANUTENCAO, VALOR, DESCRICAO) values (52, '6347-01-04', 8817.05, 'diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu');
