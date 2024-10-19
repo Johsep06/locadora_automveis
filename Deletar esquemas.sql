@@ -1,12 +1,5 @@
 USE LOCADORA_AUTOMOVEIS;
 
--- Comandos para excluir os dados
-DELETE FROM CLIENTE
-WHERE CPF IN (
-	SELECT CPF
-    FROM CLIENTE
-);
-
 -- Comandos para excluir as tabelas
 
 DROP TABLE HISTORICO_MANUTENCAO;
