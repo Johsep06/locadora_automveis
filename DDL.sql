@@ -1,6 +1,5 @@
 -- Remova os traços no inicio da linnha abaixo para criar o banco de dados
 -- CREATE DATABASE LOCADORA_AUTOMOVEIS;
-
 USE LOCADORA_AUTOMOVEIS;
 
 

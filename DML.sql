@@ -6,7 +6,7 @@ FROM CONTRATO
 GROUP BY PLACA;
 
 -- Número de vezes que um cliente alugou um carro
-SELECT  NOME,  COUNT(DISTINCT PLACA) AS "N de Alugueis", contrato.CPF, cliente.CPF
+SELECT  NOME,  COUNT(PLACA) AS "N de Alugueis", contrato.CPF, cliente.CPF
 FROM CONTRATO, cliente
 WHERE contrato.CPF = cliente.CPF
 GROUP BY contrato.CPF;
@@ -39,4 +39,11 @@ WHERE NOT EXISTS (
         FROM CONTRATO 
         WHERE CLIENTE.CPF = CONTRATO.CPF
     )
+);
+
+SELECT ANO AS "Ano com mais contratos"
+FROM CONTRATOS_POR_ANO
+WHERE QTD IN (
+	SELECT MAX(QTD)
+	FROM CONTRATOS_POR_ANO
 );
