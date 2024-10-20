@@ -3,19 +3,14 @@ USE LOCADORA_AUTOMOVEIS;
 --  Número de vezes que um carro foi alugado
 SELECT PLACA, COUNT(ID) AS "N DE ALUGUEIS" 
 FROM CONTRATO
-GROUP BY PLACA;
+GROUP BY PLACA
+ORDER BY COUNT(ID);
 
 -- Número de vezes que um cliente alugou um carro
-SELECT  NOME,  COUNT(PLACA) AS "N de Alugueis", contrato.CPF, cliente.CPF
+SELECT  NOME,  COUNT(PLACA) AS "N de Alugueis", contrato.CPF
 FROM CONTRATO, cliente
 WHERE contrato.CPF = cliente.CPF
 GROUP BY contrato.CPF;
-
--- Número de contratos por ano
-SELECT YEAR(DATA_INICIAL) AS ANO, COUNT(ID) AS "N DE CONTRATOS"
-FROM CONTRATO
-GROUP BY ANO
-ORDER BY ANO;
 
 -- Anos com menor e maior números de contratos e média ao ano
 SELECT 
