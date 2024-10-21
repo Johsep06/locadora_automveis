@@ -12,17 +12,6 @@ FROM CONTRATO, cliente
 WHERE contrato.CPF = cliente.CPF
 GROUP BY contrato.CPF;
 
--- Anos com menor e maior números de contratos e média ao ano
-SELECT 
-    MIN(contratos_por_ano.qtd_contratos) AS ano_com_menos_contratos,
-    MAX(contratos_por_ano.qtd_contratos) AS ano_com_mais_contratos,
-    AVG(contratos_por_ano.qtd_contratos) AS media_contratos_por_ano
-FROM (
-    SELECT YEAR(DATA_INICIAL) AS ano, COUNT(*) AS qtd_contratos
-    FROM CONTRATO
-    GROUP BY YEAR(DATA_INICIAL)
-) AS contratos_por_ano;
-
 -- Lista de clientes que alugaram todos os carros
 SELECT NOME, CPF
 FROM CLIENTE
